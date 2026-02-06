@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입연산자</title>
+</head>
+<body>
+    <script>
+        //비교연산자 => 참(true), 거짓(false)반환
+
+        // == (값), == (값, type), != (같지않다),
+        //  >(크다, 초과), <(작다, 미만), >=(이상), <= (이하)
+
+        let su1=10;
+        let su2=3;
+
+        console.log(su1>su2); // true 10 > 3
+        console.log(su1==su2); // false 10 == 3
+        console.log(su1 < su2); // false 10 < 3
+        console.log(su1 >= su2); // true 10 >= 3
+        console.log(su1 <= su2); // false 10 <= 3
+        console.log(su1 != su2); // true 10 != 3
+
+
+        //엄격한 비교 ==, === 차이
+        let a=10; //number type
+        let b="10"; //string type
+        console.log(a==b);  // true , 자동형변환해서 비교함
+        console.log(a===b); // false , type까지 같아야 참으로 나옴
+    </script>
+</body>
+</html>
