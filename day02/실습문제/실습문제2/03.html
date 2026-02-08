@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 계산기</title>
+</head>
+<body>
+    <script>
+        /*
+        3. 간단한 계산기
+        문제: 사용자로부터 두 개의 숫자와 연산자(+, -, *, /, %)를 입력받아 계산 결과를 출력하세요.
+        예: 입력: 10, 5, + → 출력: 10 + 5 = 15
+        연산자가 잘못된 경우 "지원하지 않는 연산자입니다"를 출력하세요.
+ 
+        잘못된 연산자가 입력된 경우 기본값을 지정하세요.
+        */
+
+        let num1 = parseInt(prompt("첫번째 숫자를 입력하세요"));
+        let num2 = parseInt(prompt("두번째 숫자를 입력하세요"));
+        let cal = prompt("연산자(+, -, *, /, %)를 지정하세요");
+
+        switch(cal){
+            case "+":
+                alert(num1 + " + " + num2 + " = " + (num1+num2));
+                break;
+            case "-":
+                alert(num1 + " - " + num2 + " = " + (num1-num2));
+                break;
+            case "*":
+                alert(num1 + " * " + num2 + " = " + (num1*num2));
+                break;
+            case "/":
+                alert(num1 + " / " + num2 + " = " + (num1/num2));
+                break;
+            case "%":
+                alert(num1 + " % " + num2 + " = " + (num1%num2));
+                break;
+            default:
+                alert("지원하지 않는 연산자입니다");
+                break;
+        }
+    </script>
+</body>
+</html>
