@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        
+
+         // 메뉴 선택시 다른 코드를 수행하기 
+         // 많은 분기코드를 작성할 때 적합
+
+
+        */
+
+        let menu;
+        menu=prompt("메뉴를 선택하시오 1.등록 2.조회 3.삭제 4.종료");
+        //prompt로 입력받는 내용은 모두 문자열로 취합된다
+
+        // "1"    1  이 2개는 다름
+        // "1"  -> 숫자로 변환해서 사용하기
+        // parseInt();  //함수, 문자열(숫자형태를 가진)을 실제 숫자로 바꿔줌
+
+        menu = parseInt(menu); // "2" -> 2
+
+        switch(menu){
+            case 1:
+                alert("등록합니다^^");
+                break;  //  종료하려면   break 넣어애 함
+
+            case 2:
+                alert("조회합니다");
+                break;
+
+            case 3:
+                alert("삭제합니다");
+                break;
+
+            case 4:
+                alert("종료합니다");
+                break;
+                
+            default: // 위의 조건에 해당되지 않는 경우
+                alert("메뉴에 없습니다");
+            }
+    </script>
+</body>
+</html>

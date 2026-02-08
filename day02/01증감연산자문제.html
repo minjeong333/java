@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자문제</title>
+</head>
+<body>
+    <script>
+
+        let a=5;
+
+        //a++;  //a++ => 연산자가 연산의 결과가 발생됨 // a+b   => 연산자가 연산의 결과가 발생됨
+        ++a;
+
+        console.log(a); 
+
+        // 문제
+        let x=5;
+        let y=10;
+        x++; // 5인데 출력하지 않으니까 그냥 무시하면 됨 ∴ 현재까지 x=6
+        let z = x++ + ++y; // x: 6+1이니까 7, y: 10+1이니까 11
+        //z의 값이 얼마?
+        // z = 6 + 11
+        //   = 17
+
+
+        //문제2
+        let k1=10;
+        let k2=8;
+        --k2;  // 9 7
+        let result = k1-- - --k2; // 10-6=4
+        // result ?
+        // 
+
+    </script>
+</body>
+</html>

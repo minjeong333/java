@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수맞추기게임</title>
+  </head>
+  <body>
+    <script>
+
+
+      /*
+        문제분석 
+        1. 1~100 수 맞추기 프로그램
+
+
+        >>자료명세 찾기
+
+        입력 : 사용자의 입력 수 : input
+        출력 : "정답 축하 또는 정답 축하 간식 제공 ^^!!" : 
+        처리 : 컴퓨터가 정한 수 : randomSu 
+        시도횟수 값: tryCnt 
+
+
+        >> 처리과정
+
+        1. 컴퓨터가 수를 정한다(임의의 수 )
+        2. 반복(수를 맞출때까지 반복)
+            2.1 시도횟수증가 
+            2.2 사용자가 수를 입력
+            2.3 두 수가 같은지 판단 
+                - 수가 작으면 
+                  더 큰 수를 입력하세요 출력 
+                - 수가 크다면
+                  더 작은 수를 입력하세요 출력 
+        3. 시도횟수 3이내인지 판단
+            -참이면 "성공 간식"
+            -거짓이면"성공" 
+        4. 종료
+    */
+        //1~100사이의 랜덤수
+        let input; // 입력
+        let randomSu, tryCnt=0; // 처리변수
+
+        randomSu = Math.floor( (Math.random()*100)) +1; //1~100
+
+        input = prompt("숫자를 입력하시오")
+
+        //2
+        while( randomSu != input){
+            tryCnt = tryCnt+1;
+            if( randomSu > input){ // 30  >  5
+                alert("더 큰 수를 입력하시오"); 
+            }else if( randomSu < input){  // 30  <  5
+                alert("더 작은 수를 입력하시오");
+            }
+            input = prompt("숫자를 입력하시오");
+        }
+
+
+        //3 
+        // alert("성공");
+        if(tryCnt <=3){
+            alert("축하합니다 간식 성공!!");
+        }else{
+            alert("축하합니다 성공");
+        }
+</script>
+  </body>
+</html>

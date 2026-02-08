@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산출연산자</title>
+</head>
+<body>
+    <script>
+        //연산자는 연산의 결과가 반드시 발생한다 !!
+
+        //산술연산자 * / % + -
+
+        //더하기
+        let a=10;
+        let b=20;
+          let result = a+b;
+          console.log(result);
+
+        //빼기
+        let x=15;
+        let y=5;
+        let result2 = x-y;
+        console.log(result2);
+
+        // 곱하기
+        let su=4;
+        let su2=3;
+        let result3 = su*su2;
+        console.log(result3);
+
+        //나누기
+        let number =21;
+        let divisor=4;
+        let result4 = number / divisor;
+        console.log(result4); //4.25
+
+        //나누기에서 정수만 얻고 싶다면
+        let result5 = Math.floor(result4); // 5.25에 가까운 정수는 5, 6가 있다.
+
+        //나머지 (정수연산에서 나머지 구하기)
+        // 10 % 3 => 10 나누기 3...1(나머지)
+
+        let num=10;
+        let divisor2=3;
+
+        let 나머지 = num % divisor2;
+        console.log(나머지); // 홀수·짝수 판단할 때 사용함
+
+        //짝수판별 나머지사용활용하기
+        let number2 =10; // 짝수판별하기
+        let number2나머지 = number2 % 2; // 0  혹은  1
+
+        if(number2나머지 ==0){
+            console.log("짝수")
+        }else{
+            console.log("홀수")
+        }
+
+        //거듭제곱
+        let base =2;
+        let 지수=3;
+        let 거듭제곱결과 ;
+        거듭제곱결과 = base ** 지수; // 2의 3승
+        console.log(거듭제곱결과);
+
+    </script>
+</body>
+</html>
