@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">다시</button>
+    <script>
+      function 가위바위보() {
+        let home = ["가위", "바위", "보"];
+        let user = prompt("가위, 바위, 보를 입력하세요");
+        let index = home[Math.floor(Math.random() * 3)];
+        if (index == user) return "무승부" + index;
+        if (
+          (user === "보" && index === "가위") ||
+          (user === "가위" && index === "바위") ||
+          (user === "바위" && index === "보")
+        )
+          return "졌습니다" + index;
+        if (
+          (user === "가위" && index === "보") ||
+          (user === "바위" && index === "가위") ||
+          (user === "보" && index === "보")
+        )
+          return "이겼습니다" + index;
+      }
+      alert(가위바위보());
+      function 다시하기() {
+        alert(가위바위보());
+      }
+      btn.onclick = 다시하기;
+    </script>
+  </body>
+</html>
