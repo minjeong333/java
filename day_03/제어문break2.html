@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문break</title>
+</head>
+<body>
+    <script>
+
+        // switch -> 메뉴입력
+        // 여러번(3번) 반복해서 메뉴입력하기
+
+        for(let i=1; i<=3; i++){
+            // console.log("dfdf");
+            let menu = prompt("메뉴선택 1. 등록 2. 조회 3. 종료");
+
+            switch(menu){
+                case "1":
+                    alert("등록합니다");
+                    break;
+                case "2":
+                    alert("조회합니다");
+                    break;
+                case "3":
+                    alert("종료합니다");
+                    break;
+                default:
+                    alert("메뉴없음");
+            }
+        }
+
+    </script>
+</body>
+</html>

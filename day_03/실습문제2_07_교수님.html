@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제2_07_교수님</title>
+</head>
+<body>
+    <script>
+
+
+        /*
+        
+        1  2  3  4  5  6  7  8  9  10  12  13  14   15   16  ...  100
+        
+        x  x  3  x  5  3  x  x  3   5   3   x   x  3과5   x  ...  x 
+
+
+
+        처리과정
+
+       1. 반복(1~100)
+            수판단
+            - 3의 배수이면 "3의 배수" 출력
+            - 5의 배수이면 "5의 배수" 출력
+            - 3과 5의 공배수이면 "3과 5의 공배수" 출력
+
+        */
+
+        //순서도 그려보기
+        //검증
+
+        for( let i=1; i<=100; i++){
+            if(i % 3 == 0 && i % 5 == 0){
+                document.write(i + " : 3과 5의 공배수");
+            }else if(i % 3 == 0){
+                document.write(i + " : 3의 배수");
+            }else if(i % 5 == 0){
+                document.write(i + " : 5의 배수");
+            }else{
+                document.write(i + " : x");
+            }
+        }
+
+
+    </script>
+</body>
+</html>

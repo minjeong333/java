@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>오늘의 점심메뉴</title>
+  </head>
+  <body>
+    <h2>오늘의 점심메뉴 😆</h2>
+    <img id="menuImg" width="300" />
+    <p id="info"></p>
+    <button id="button">click</button>
+    <script>
+      let 이전인덱스 = -1;
+      function 랜덤인덱스뽑기() {
+        let idx;
+        do {
+          idx = Math.floor(Math.random() * 이미지들.length);
+          alert("이전인덱스" + 이전인덱스);
+          alert("idx" + idx);
+        } while (idx == 이전인덱스);
+        이전인덱스 = idx;
+        return idx;
+      }
+      function 이미지바꾸기() {
+        const img = document.getElementById("menuImg");
+        const info = document.getElementById("info");
+        const button = document.getElementById("button");
+        const idx = 랜덤인덱스뽑기();
+        alert(idx);
+        const url = 이미지들[idx]; //+ "?t=" + Date.now();
+        info.textContent = idx;
+        img.src = url;
+        img.onerror = function () {
+          이미지바꾸기();
+        };
+      }
+      button.onload = function () {
+        alert("오늘의 점심메뉴입니다 🍽️");
+        이미지바꾸기();
+      };
+    </script>
+  </body>
+</html>

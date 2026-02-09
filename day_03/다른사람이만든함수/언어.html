@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>언어 인사말</title>
+  </head>
+  <body>
+    <script>
+      function country1(나라) {
+        if (나라 == "한국") {
+          return "안녕 !";
+        } else if (나라 == "미국") {
+          return "Hi !";
+        } else if (나라 == "일본") {
+          return "こんにちは !";
+        } else if (나라 == "중국") {
+          return "Nǐ hǎo !";
+        } else if (나라 == "스페인") {
+          return "¡ Hola !";
+        } else if (나라 == "베트남") {
+          return "Xin chào !";
+        } else {
+          return "아직 배우지 못한 언어입니다 ! ㅠㅠ";
+        }
+      }
+
+      let input = prompt("나라 이름을 입력해주세요!");
+      let result = country1(input);
+      alert(result);
+    </script>
+  </body>
+</html>

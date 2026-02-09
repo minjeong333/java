@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 화이팅 문구</title>
+</head>
+<body>
+
+    <img id="luck" src="" alt="">
+    <script>
+
+
+        /*
+        기능: 랜덤화이팅문구출력
+        입력:x
+        출력:화이팅 문구 1개 
+        */
+        function 랜덤화이팅문구(){
+            let 문구들=["오늘도 화이팅", "할 수 있다!", "어제보다만 잘하면 돼요", "아자아자"];
+            let 랜덤문구=Math.floor(Math.random() * 문구들.length);
+            return 문구들[랜덤문구];
+        }
+
+        let result = 랜덤화이팅문구();
+        alert(result);
+
+    
+    </script>
+</body>
+</html>

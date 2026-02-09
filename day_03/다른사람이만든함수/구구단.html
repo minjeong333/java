@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+</head>
+<body>
+    <script>
+        //3. 원하는 구구단 출력하기
+        function gugudan(n){
+            document.write("<h2>" + n + "단 <br></h2>");
+            for(let i = 1; i <= 9; i++){
+                document.write(n + " X " + i + " = " + n * i + "<br>");
+            }
+        }
+        let n = prompt("원하는 구구단 단수를 입력하세요.");
+        gugudan(n);
+    </script>
+</body>
+</html>

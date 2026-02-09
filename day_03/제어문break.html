@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문break</title>
+</head>
+<body>
+    <script>
+        /*
+            break문 : 반복문에서 break를 사용하면 자신이 속한 반복문을 빠져나오게 함(반복문 탈출) 
+        */
+
+        //3번 인사하시
+        // alert("hi");
+        // alert("hi");
+        // alert("hi");
+
+
+
+        //while에서 break사용
+        let cnt=0;
+        while(true){
+            alert("hi");
+            cnt=cnt+1;
+            if(cnt >= 3) break;
+        }
+
+        /*
+                    cnt 0
+        
+        반복문
+          "hi"         1
+          "hi"         2 
+          "hi"         3 -> break 
+        */
+
+        // for(let i=1; i<=3; i++){
+        //     alert("hi");
+        // }
+    </script>
+</body>
+</html>

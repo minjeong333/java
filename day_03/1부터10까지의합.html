@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1부터 10까지의 합</title>
+</head>
+<body>
+    <script>
+
+        // 1~10까지의 합
+
+        // 1  2  3  4  5  6  7  8  9  10 -> 순번(반복횟수)
+        // 1  2  3  4  5  6  7  8  9  10 -> 수, 항
+
+        //입력
+        //출력:1~10까지 합 : sum
+        //처리 :  i (반복횟수 이자 수(항))
+
+        //처리과정
+
+        /*
+        1. 반복
+             수(항)를 구하기
+             수를 sum에 누적하기
+        2. 누적값 출력하기
+        
+        */
+
+        let sum=0;
+        for (let i=1; i<=10; i++){
+            sum = sum + i;
+        }
+        alert(sum);
+
+        /*
+                              sum=0
+            i=1                 1
+            i=2                 3
+            i=3                 6
+            i=4                 10
+            i=5                 15
+            i=6                 21
+            i=7                 28
+            i=8                 36
+            i=9                 45
+            i=10                55
+            
+        */
+    </script>
+</body>
+</html>

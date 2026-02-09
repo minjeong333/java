@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //실제문제를 푸는 방법은 아니지만 한 번 해석해보기
+        let i = 1;
+        while(i <= 100){
+            document.write("3x" + i + "=" +3 * i + "<br>");
+            i++;
+        }
+        let j = 1;
+        while(j <= 100){
+            document.write("5x" + j + "=" +5 * j + "<br>");
+            j++;
+        }
+        let five = 5;
+        let min = 0;
+        let n = 1;
+        while(n <= 100){
+            five = 5 * n;
+            min = (five % 3);
+            if(min == 0){
+                document.write("3과 5의 공배수 =" + five + "<br>");
+            }else if(min > 0){
+                document.write("5의 배수 :" + five +", 3으로 나눈 나머지: " + min + "<br>");
+            } 
+            n++;
+        }
+    </script>
+</body>
+</html>

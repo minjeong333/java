@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <script>
+      function checkPassword(password) {
+        //특수문자 검사
+        let symbolsCharCount = 0;
+        const SYMBOLS = "!@#$%"; //허용할 특수문자들
+        for (let i = 0; i < password.length; i++) {
+          if (SYMBOLS.includes(password[i])) {
+            //비밀번호(password)의 i번째가 특수문자에 포함되어있는지 확인
+            symbolsCharCount++; //있으면 카운트 증가
+          }
+        }
+        if (password.length < 8) {
+          return "SHORT";
+        }
+        if (symbolsCharCount === 0) { //비밀번호에 최소 1개라도 특수문자가 포함되어있는지
+          return "NO-SYMBOLS";
+        } else {
+          return "SUCCESS";
+        }
+        // if(password.length < 8){
+        //     return "SHORT";
+        // }else if(symbolsCharCount === 0){
+        //     return "NO-SYMBOLS";
+        // }else{
+        //     return "SUCCESS";
+        // }
+      }
+
+      let input = prompt("회원가입시 사용할\n비밀번호를 설정해주세요");
+      let result = checkPassword(input);
+      if (result === "SUCCESS") {
+        alert("회원가입 성공");
+        console.log("설정된 비밀번호: " + input);
+      } else if (result === "SHORT") {
+        alert("비밀번호가 너무 짧습니다!");
+        console.log("설정된 비밀번호: " + input);
+      } else if (result === "NO-SYMBOLS") {
+        alert("최소 1개 이상의 특수문자가 포함되어야 합니다.");
+        console.log("설정된 비밀번호: " + input);
+      }
+    </script>
+  </body>
+</html>

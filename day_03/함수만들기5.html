@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수만들기5</title>
+</head>
+<body>
+
+    <img id = result src="" alt="">
+    <script>
+
+        /*
+        기능: 레시피알려주기
+        입력: x
+        반환: x
+        
+        */
+
+       function 라면레시피알려주기(){
+        alert("물 500ml를 냄비에 끓인다");
+        alert("라면과 스프를 넣고 5분을 끓인다");
+        alert("파와 계란을 첨가한다");
+       }
+
+       라면레시피알려주기();
+
+
+
+       /*
+        기능: 레시피알려주기
+        입력: x
+        반환: 라면이미지주소
+        
+        */
+
+       function 라면레시피알려주기2(){
+        alert("물 500ml를 냄비에 끓인다");
+        alert("라면과 스프를 넣고 5분을 끓인다");
+        alert("파와 계란을 첨가한다");
+
+        return "https://img.freepik.com/free-psd/delicious-ramen-noodles-with-egg-spring-onions_191095-79622.jpg?semt=ais_hybrid&w=740&q=80";
+       }
+
+      let img = 라면레시피알려주기2();
+      let imgTag = document.getElementById("result");
+      imgTag.src=image;
+
+    </script>
+</body>
+</html>

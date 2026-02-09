@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이메일</title>
+</head>
+<body>
+    <script>
+        let email = "";
+        
+        function isValidEmail(email){ // email 기본조건 충족하는지 확인해보기  
+
+            if(!email.includes("@") ){ //.include("")는 " " 안의 문자열이 그 변수에 포함되어져있는지 아닌지 확인한다.
+                alert("@를 넣으세요")
+                return(false)
+
+            }else if(!email.includes(".")){
+                alert(".을 넣으세요")
+                return(false)
+
+            }
+            // @의 위치 찾기
+            let atIndex = email.indexOf("@"); 
+            // .의 위치 찾기
+            let dotIndex = email.lastIndexOf(".");     
+            if(atIndex > dotIndex){
+                alert(".은 @ 뒤에 와야 합니다!"); 
+                return false;
+            }else if(email.length < 5){
+                alert("email의 길이가 최소 5개여야 해요")
+                return(false)
+            }else{
+                return(true)
+            }
+        } 
+        let your_email = prompt("당신의 이메일을 입력해주세요")
+
+            let result = isValidEmail(your_email);
+
+            if(result == true){
+                alert("축하합니다.제대로 email을 입력했습니다")
+            }else{
+                alert("다시 email을 입력해주세요.")
+            }  
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수만들기4</title>
+</head>
+<body>
+    <script>
+
+        //메뉴추천하기 함수
+
+        /*
+        
+        기능:메뉴추천
+        입력: x
+        반환: 메뉴명
+        */
+
+        function 메뉴추천하기(){
+            let foodName = "돈까스";
+            return foodName;
+        }
+
+        let result = 메뉴추천하기();
+        alert(result);
+
+
+        /*
+        기능:메뉴추천
+        입력:x
+        반환:메뉴명
+        */
+
+       function 메뉴추천하기2(){
+        let food=["김치찌개","된장찌개","돈까스","라면","피자"];
+        let idx = Math.floor(Math.random() * food.length);  
+        return food[idx];
+    }
+    
+    </script>
+</body>
+</html>

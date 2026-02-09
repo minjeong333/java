@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>오늘의 명언</title>
+</head>
+<body>
+  <h2>🍀오늘의 명언🍀</h2>
+
+  
+  <img src="" id="quote" width="300">
+  
+  <script>
+    function 오늘의명언(  ) {
+
+      let 이미지들 = [ //이미지 여러개니까 배열 사용
+        "https://i.pinimg.com/1200x/f3/42/ad/f342ad499b0d0456928560b87ff61580.jpg",
+        "https://i.pinimg.com/736x/6f/c2/b3/6fc2b3910f8bb2612549554948e86973.jpg",
+        "https://i.pinimg.com/736x/01/c1/22/01c122263e3a3e9066084274b7b23f9e.jpg",
+        "https://i.pinimg.com/736x/e6/ae/94/e6ae949f3a030721058b7899205fd75e.jpg",
+        "https://i.pinimg.com/1200x/c6/1e/56/c61e5666ca2e1c9b7b80d43d036883c3.jpg",
+        "https://i.pinimg.com/736x/46/80/a7/4680a7dcc6346462d8e71ab3c90b2c58.jpg"
+      ];
+      let index = Math.floor(Math.random() * 이미지들.length); //Math.floor()로 묶어서 정수로 만들어주기
+      return 이미지들[index]; //위에 배열 되어있는 이미지들 중 하나 랜덤하게 반환
+    }
+
+    alert("🍋Quote of the Day🍋");
+
+
+    let result = 오늘의명언();
+
+
+    let imgTag = document.getElementById("quote"); //id가 quote인 요소 찾아오기
+    imgTag.src = result;
+  </script>
+</body>
+</html>

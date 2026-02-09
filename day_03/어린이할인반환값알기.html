@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어린이할인반환값알기</title>
+</head>
+<body>
+    <script>
+
+
+        //어린이할인
+        /*
+        기능:어린이판단하기(10살)
+        입력:나이
+        반환:x
+        */
+
+        /*
+        기능:어린이판단하기(10살)
+        입력:나이
+        반환:true/false
+        */
+
+
+        function 어린이판단하기(age){
+            if(age <=10){
+                alert("어린이입니다");
+            }
+        }
+
+
+        //어린이 판단해서 할인해주기
+        // let 입장권가격=10000;
+        // let 나이=10;
+        //어린이할인
+        // 어린이판단하기(10);
+        //뒤의 코드에서 어린이이면 50%할인 해주기
+
+
+        function 어린이판단하기2(age){
+            if(age <= 10){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        let 티켓가격=10000;
+        let 사람나이=10;
+        let result = (어린이판단하기2(사람나이)); // let result = true;
+        //뒤의 코드에서 어린이이면 50%할인 해주기  => 코드 작성 가능
+        let 구매가격;
+        if(result==true){
+            구매가격 = 티켓가격 * 0.5;
+        }else{
+            구매가격 = 티켓가격;
+        }
+        alert(구매가격);
+
+
+
+    </script>
+</body>
+</html>
