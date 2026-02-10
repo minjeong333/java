@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열맛보기</title>
+</head>
+<body>
+    <script>
+
+        //1차원 배열:
+        //배열의 요소가 변수와 같은 역할을 함
+
+        let arr=[2,4,6];
+
+        //배열명[순번]  => 배열의 요소 접근
+
+        document.write(arr[0]); //배열의 요소의 값을 이용
+        document.write(arr[1]);
+        arr[1]=10; //배열의 요소에 값을 저장(대입)
+        document.write(arr[1]);
+
+
+        for(let i=0; i<3; i++){ // 0 1 2
+            document.write(arr[i]);
+        }
+
+
+        //2차원배열 : 배열의 요소가 1차원 배열인 것
+        //행, 열로 접근 한다(변수와 같은 역할을 하는 네모공간에 접근가능)
+        let arr2=[
+            [2,4,6],   // 0행
+            [8,10,12]    // 1행
+        ];
+
+        // 
+        document.write("<h2>2차원배열에서 값꺼내기, 행, 열 순번</h2>");
+        document.write(arr2[0][0]); // 2
+        document.write(arr2[0][1]); // 
+        document.write(arr2[0][2]); // 
+
+        document.write(arr2[1][0]);
+        document.write(arr2[1][1]);
+        document.write(arr2[1][2]);
+
+
+        //3차원배열
+        //배열의 요소가 2차원배열인 것
+        //면, 행, 열
+
+        let arr3 =[
+
+            [
+                [2,4,6],
+                [8,10,12]
+            ],
+            [
+                [1,3,5],
+                [7,9,11]
+            ]
+        ];
+
+        //2,4,6 출력하기
+
+        document.write("<h2>3차원배열꺼내기, 면, 행, 열 순번</h2>");
+        document.write(arr3[0][0][0]);
+        document.write(arr3[0][0][0]);
+        document.write(arr3[0][0][2]);
+    </script>
+
+
+
+</body>
+</html>

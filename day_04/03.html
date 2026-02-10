@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+</head>
+<body>
+    <script>
+        /*
+        3.  구구단을 출력하는 함수 만들기  ( 단  -> 해당 단을 출력하기  )
+        기능: 구구단 출력하기
+        입력: 단 숫자
+        출력: 해당 구구단
+        */
+
+        function 구구단(num){
+
+            let result = "";
+
+            for(let i=1; i<=9; i++){
+                document.write(num * i +"<br>");
+            }
+            return result;
+        }
+
+        let num = prompt("구구단 몇 단을 원하시나요?");
+
+        let realResult = 구구단(num);
+        alert(결과);
+        
+
+
+    </script>
+</body>
+</html>

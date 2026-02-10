@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //지역변수 : 함수안에서 만들어지는 변수를 지역변수
+        //함수 "안"에서만 사용 가능
+        //함수 "밖"에서는 사용할 수 X.
+        //함수에서 선언된 지역변수들은 함수가 리턴될 때 모두 정리됨
+
+
+        //순서1.함수선언식: 함수 만들기
+        function sum( num1, num2){ // 순서3. 함수영역이 만들어짐(지역변수가 만들어진다)
+            //함수내부                                        (num1, num2, total)
+            let total = num1 + num2;
+            alert(total);
+        }  // 함수가 반환될 때 함수에서 만들어진 변수들은 모두 해제(=사라짐)
+        /* 순서4. 함수반환(모두함수는 돌아간다. 함수를 호출한 쪽으로 : 이 때 함수영역 사라짐,
+               num1, num2, total변수는 사라짐 ) */
+
+        /*
+
+        sum이라는 함수에서 만들어지는 지역변수 찾아보기
+        : num1, num2, total
+
+        */
+
+        //순서2.함수호출
+        sum(10,5); // 함수가 필요한 시점에서 호출, 반드시 "괄호"가 있다 !
+        alert(total); // 오류발생 
+                      // ∵ 함수 "밖"에서 함수 "안"에서 만든 변수를 사용할 수 X/
+                      // 함수 안에서 만든 값을 외부에서 사용하고 싶다면 반드시 값을 리턴해야 함 !!
+    
+    
+    
+    
+    </script>
+</body>
+</html>

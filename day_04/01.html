@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+<body>
+    <script>
+        /*
+         1.  홀수인지판단하는 함수 만들기  ( 수 -> 홀수이면  true, false  반환 )
+
+          기능: 입력받은 숫자가 홀수인지 아닌지 판단
+          입력: 숫자 1개
+          출력: 홀수면 홀수라고 출력
+        */
+        
+       
+
+        function 홀수(num){
+            if(num % 2 == 1){
+                return true;
+            }else if(num % 2 == 0){
+                return false;
+            }
+        } 
+
+        let num = prompt("숫자를 입력하세요");
+        let result = 홀수(num);
+        if(result == true){
+            alert ("홀수입니다");
+        }else{
+            alert("홀수가 아닙니다");
+        }
+        
+    </script>
+</body>
+</html>

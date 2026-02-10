@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+</head>
+<body>
+    <script>
+        /*
+        02. 성인판단하는 함수 만들기  (  나이  -> 20세 이상이면 true, false 반환 )
+
+        기능: 입력받은 나이가 성인인지 판단
+        입력: 나이 
+        출력: 성인이면 성인으로 출력
+        */
+
+
+        function 성인(age){
+            if(age >= 20){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        let age = prompt("나이를 입력하세요")
+
+        let result = 성인(age);
+        if(result == true){
+            alert ("성인입니다");
+        }else{
+            alert("성인이 아닙니다");
+        }
+    </script>
+</body>
+</html>
