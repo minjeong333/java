@@ -59,19 +59,32 @@
             for(let i=0; i<3, i++){
                 document.write(even[0][i]);
             }
-
+            document.write("<br>");
 
             //2행 출력하기 (1행)
             for(let i=0; i<3, i++){
-                document.write(even[0][i]);
+                document.write(even[1][i]);
             }
-
+            document.write("<br>");
 
             //3행 출력하기 (2행)
             for(let i=0; i<3, i++){
-                document.write(even[0][i]);
+                document.write(even[2][i]);
             }
-          
+            document.write("<br>");
+
+
+            
+            //위의 코드를 반복하자
+            document.write("<p>중첩 반복문으로 출력하기</p>")
+            for(let k=0; k<3, k++){
+
+            for(let i=0; i<3, i++){
+                document.write(even[k][i] + ",");
+            }
+            document.write("<br>");
+
+          }
         
     </script>
 </body>
