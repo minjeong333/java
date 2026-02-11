@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인페이지</title>
+    <style>
+      header {
+        height: 100px;
+        background-color: lightblue;
+
+        position: relative;
+      }
+      nav {
+        height: 60px;
+        background-color: rgb(167, 86, 86);
+      }
+      section {
+        height: 500px;
+        background-color: rgb(132, 218, 132);
+      }
+      footer {
+        height: 100px;
+        background-color: indianred;
+
+        position: absolute; /*부모를 기준, top, left, right, bottom 사용 가능*/
+
+        display: flex;
+        flex-direction: row;
+      }
+      .title {
+        background-color: red;
+        width: 100px;
+
+        /* position: absolute; 부모를 기준, top, left, right, bottom 사용 가능 */
+        top: 0;
+        left: 20px;
+      }
+      .search-bar {
+        width: 200px;
+        height: 40px;
+        border: 1px solid black;
+        display: flex;
+        right: 20px;
+        bottom: 10px;
+      }
+      .search-text {
+        width: 100px;
+        border: none;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .search-img {
+        width: 40px;
+        border: 1px solid blue;
+        /*background-color: red; */ /*이미지 넣을 공간에 배경색 먼저 넣어보기*/
+
+        /*특정 영역에 이미지를 채울 때는 이 3개가 세트!!*/
+        background-image: url(https://e7.pngegg.com/pngimages/796/404/png-clipart-computer-icons-search-box-others-miscellaneous-apartment.png);
+        background-size: cover;
+        background-position: center;
+      }
+      .footer-item {
+        border: 1px solid blue;
+        width: 33.3%;
+        padding: 10px;
+      }
+      /*상품목록 만들기 css*/
+      ul{
+        list-style: none;
+        margin: 0;
+        border: 1px solid red;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+      }
+      ul li{
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        text-align: center;  
+      }
+
+      ul li img{
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title">title 이미지</div>
+      <div class="search-bar">
+        <!-- 검색바 -->
+        <!-- <div class="search-bar"> -->
+        <input type="text" class="search-text" />
+        <div class="search-img">x</div>
+      </div>
+    </header>
+
+    <nav>회원가입 로그인</nav>
+
+    <section>
+      
+        <ul>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/27/57/37/3111375727_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/27/57/37/3111375727_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/27/57/37/3111375727_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/27/57/37/3111375727_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/27/57/37/3111375727_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/27/57/37/3111375727_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            
+        </ul>
+      
+    </section>
+    <footer>
+      <div class="footer-item">Acorn</div>
+      <div class="footer-item">연락처</div>
+      <div class="footer-item">기본정보</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색바2</title>
+    <style>
+        .search-bar{
+            width: 300px;
+            height: 50px;
+            border: 3px solid skyblue;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .search-text{
+            width: 100px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            box-sizing:border-box   
+        }    
+        .search-img{
+            width: 40px;
+            /* border: 1px solid blue; */
+            /*background-color: red; */ /*이미지 넣을 공간에 배경색 먼저 넣어보기*/
+           
+            /*특정 영역에 이미지를 채울 때는 이 3개가 세트!!*/
+            background-image: url(https://e7.pngegg.com/pngimages/796/404/png-clipart-computer-icons-search-box-others-miscellaneous-apartment.png);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 검색바 -->
+    <div class="search-bar">
+        <input type="text" class="search-text"><div class="search-img">x</div>
+    </div>
+</body>
+</html>
