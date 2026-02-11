@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열문제풀이03</title>
+</head>
+<body>
+    <script>
+        //1차원 배열 문제 만들고 풀어보기
+
+        //3. 배열에 원하는 내용이 있는지 확인하기
+    
+        let fruit=["딸기", "복숭아", "사과", "블루베리"];
+
+        //원하는 과일이 존재하는지 알아보기 (ture, false) => 논리형데이터로 처리하기
+
+        let findfruit="배";
+        let result=false; // true, false가 담길 변수 (결과값 저장변수)
+
+        for(let i=0; i<fruit/length; i++){
+            let item = fruit[i];
+             //  console.log(item);
+            if(item == findFruit){
+                result=true;
+                break;
+            }
+          }
+
+          
+          alert(result); // true(과일 존재하면), flase(과일 존재하지 않으면)
+    
+    </script>
+
+</body>
+</html>

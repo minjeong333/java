@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열문제풀이02</title>
+</head>
+<body>
+    <script>
+        //1차원 배열 문제 만들고 풀어보기
+
+        //2. 배열의 요소를 다 더하기
+
+        
+        let kors=[90, 100, 88]; //
+        let sum = kors[0] + kors[1] + kors[2];
+        alert(sum);
+
+
+        // 배열 - 반복문 ver.
+        let maths=[87, 96, 81];
+        let mathSum=0;
+
+        /*
+        mathSum = mathSum + maths[0]; // 0 + 87
+        mathSum = mathSum + maths[1]; // 87 + 96
+        mathSum = mathSum + maths[2]; // 183 + 81 => 264
+
+        alert(mathSum);
+        */
+
+        for(let i=0; i<maths.length; i++){
+            mathSum = mathSum + maths[i];
+        }
+        alert(mathSum);
+    </script>
+
+</body>
+</html>

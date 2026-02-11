@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let fruits=[사과, 배, 오렌지];
+        // let fruits2=[감, 딸기, 블루베리];
+        // let vege=[양상추,오이,당근];
+        // let vege2=[양배추,치커리, 양파];
+        // let dressing=[렌치, 이탈리안, 참깨];
+        // let dressing2=[올리브오일, 오리엔탈, 소금후추];
+        
+        // let salad_fruits=[
+        //     [사과, 배, 오렌지],
+        //     [감, 딸기, 블루베리],
+        // ];
+        // let salad_vege=[
+        //     [양상추,오이,당근],
+        //     [양배추,치커리, 양파],
+        // ];
+        // let salad_dressing=[
+        //     [렌치, 이탈리안, 참깨],
+        //     [올리브오일, 오리엔탈, 소금후추]
+        // ]    
+           
+        let salad_selection=[
+            [
+            ["딸기", "블루베리", "크랜베리"],
+            ["오렌지", "귤", "자몽"],
+        ],
+            [
+            ["양상추" ,"케일", "치커리"],
+            ["적채","비트", "토마토"],
+        ], 
+        
+        [
+            ["렌치", "이탈리안", "참깨"],
+            ["올리브오일", "오리엔탈", "소금후추"]
+        ]    
+        ];
+        let selection1 =prompt("선호하는 과일 종류? 베리 vs 시트러스");
+        let selection2 =prompt("선호하는 야채 종류? 그린 vs 레드");
+        let selection3 =prompt("선호하는 드레싱 종류? 크리미 vs 담백");
+        if(selection1 =="베리"){
+            let i= 0||1||2;
+            document.write(salad_selection [0][0][i]+"<br>");         
+        }else{
+            let i= 0||1||2;
+            document.write(salad_selection [0][1][i]+"<br>");     
+        }
+        if(selection2 =="그린"){
+            let j= 0||1||2;
+            document.write(salad_selection [1][0][j]+"<br>");
+        }else{
+            let j= 0||1||2;
+            document.write(salad_selection [1][1][j]+"<br>");
+        }     
+        if(selection3 =="크리미"){
+            let k=0||1||2;
+            document.write(salad_selection [2][0][k]);        
+        }else{
+            let k= 0||1||2;
+            document.write(salad_selection [2][1][k]);
+        }    
+ 
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열을반환하는함수만들기3</title>
+</head>
+<body>
+    <script>
+
+
+        // 2달 메뉴추천해주는 함수
+
+
+        //기능:
+        //입력: x
+        //반환: 2달 메뉴 반환하기, 3차원배열
+        
+        function 메뉴추천2달(){
+
+                let month1=[
+                    ["마카롱", "푸딩"], //1주일
+                    ["딸기", "블루베리"],
+                    ["케잌", "쿠키"],
+                    ["아이스크림", "주먹밥"]
+                ];
+
+                let month2=[
+                    ["토스트", "핫도그"], //1주일
+                    ["붕어빵", "도넛"],
+                    ["견과류", "키위"],
+                    ["컵밥", "와플"]
+                ];
+
+                let months=[
+                    month1, month2 // 새롭게 3차원 배열을 만듦 ∵ 반환을 한 번에 여러개 할 수 x
+                ];
+
+                return months;
+        }
+    
+
+
+        let result = 메뉴추천2달();
+        
+        //면        (몇 번째에 있는 2차원 배열이니?)
+        //행, 열    (2차원)
+
+
+        for (let k=0; k<result.length; i++){  // 3차원의 크기가 => 2차원배열의 개수 => 2
+            // k => 행 인식
+            for (let i=0; i<result[k].length; i++){ //2차원 베열의 크기 => 행의 개수 => 4
+                // i => 열 인식
+                for(let j=0; j< result[k][i],length; j++){
+                document.write(result[k][i][j] + ","); // result[k][i] => 열의 개수
+                 }
+            // document.write("<br>");
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

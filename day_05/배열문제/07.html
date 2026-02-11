@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07</title>
+  </head>
+  <body>
+    <script>
+      //7. 문제: 아래  kors 배열에서  총점과 평균을 출력하시오
+      const kors = [90, 80, 70, 99, 100];
+
+      /*
+      //방법1
+      let sum = kors[0]+kors[1]+kors[2]+kors[3]+kors[4];
+      let avg = sum / 5;
+      alert(sum);
+      alert(avg);
+      */
+        
+
+      //방법2
+
+      let sum = 0;
+      let avg = 0;
+
+      for(let i=0; i<kors.length; i++){
+         sum = sum + kors[i];
+        // alert(sum);
+         avg = sum / i;
+        //  alert(avg);
+      };
+
+      alert ("kors 배열에서의 총점은 " + sum + "이고, "
+              + "평균은" + avg + "입니다");
+      
+      
+    </script>
+  </body>
+</html>

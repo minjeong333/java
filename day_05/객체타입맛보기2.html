@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체타입맛보기2</title>
+</head>
+<body>
+    <script>
+
+        let book={
+            title:"명품 웹프로그래밍",
+            author:"황기태",
+            price:30000,
+            publisher:"생능출판"
+        };
+
+        //책 정보출력
+        //객체의 속성접근하기, (멤버접근연산자)
+        // book,.title
+
+
+        //객체의 속성접근하기 []
+
+        let a = book["title"]; //쌍따옴표 주의!!
+        let b = book["author"]; 
+
+        let key = "price";
+        let c = book[key]; //book["price"]
+
+        alert(a);
+        alert(b);
+        alert(c);
+
+    </script>
+</body>
+</html>
