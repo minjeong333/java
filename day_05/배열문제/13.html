@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13</title>
+  </head>
+  <body>
+    <script>
+      //13.  문제 :아래  fruits 배열을  거꾸로 순서대로 한 새로운 배열을 만드시오
+      let fruits = ["자두", "복숭아", "포도"];
+      //방법1
+      for (i = 2; i >= 0; i--){
+       let new = fruits[i];
+        alert(new);
+      }
+
+
+
+      //방법2
+      let newFr = [];
+
+      // 배열의 item 에 추가하기
+      //
+
+      for (let k = 1; k <= fruits.length; k++) {
+        newFr[k - 1] = fruits[fruits.length - k];
+      }
+      document.write(newFr);
+
+      //   K=1  newFr[0] = fruits[3-1];
+      //  K=2     newFr[1] = fruits[3-2]
+      // K=3      newFr[2] = fruits[3-3]
+
+
+
+      //방법3
+      document.write(fruits[2]);
+      document.write(fruits[1]);
+      document.write(fruits[0]);
+
+
+    </script>
+  </body>
+</html>

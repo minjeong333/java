@@ -17,18 +17,23 @@
       for(i=0; i<kors.length; i++){
          sum = sum + kors[i];
         //  alert(sum);
-        avg = sum / i;
         };
+
+        avg = sum / kors.length
+
+        highCnt=0;
 
          //2.high 구하기 
       for(j=0; j<kors.length; j++){
          let high = kors[j];
          if(high > avg){
-            high = avg;
+            highCnt = highCnt + 1;
             }
          };
 
-         alert("kors  배열에서 평균보다 높은 점수는" + high + "개 입니다")
+         highCnt
+
+         alert("kors  배열에서 평균보다 높은 점수는" + highCnt + "개 입니다")
 
 
       //3.max의 개수 구하기
