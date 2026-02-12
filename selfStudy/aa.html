@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 히든 정보</title>
+  <style>
+    .item {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      border: 1px solid #ccc; 
+    }
+
+    .item img {
+      position: absolute;
+      width: 100%;
+      height: 100%;       
+      transition: opacity 0.3s;
+     
+    }
+
+    .hidden-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+ 
+      color: #333;
+      font-weight: bold;
+
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 2;
+    
+    }
+
+    .item:hover img {
+      opacity: 0.3;
+    }
+
+    .item:hover .hidden-info {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="item">
+    <img src="https://image2.lotteimall.com/goods/17/57/15/2615155717_1.jpg/dims/resizemc/380x380/optimize" alt="패션 여성 의류 상품 이미지">
+    <div class="hidden-info">
+      <p>숨겨진 상품 정보</p>
+    </div>
+  </div>
+
+</body>
+</html>
