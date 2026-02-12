@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const snack = {
+            name: "감자칩",
+            price: 1500,
+            stock: 50,
+            flavors: ["original", "cheese"],
+            manufacturing: {
+                country: "Korea",
+                factory: "경기도 안양  공장"
+            },
+            promotions: {
+                discount: 10, // 10% 할인
+                offerValidUntil: "2026-12-31"
+            }
+        };
+
+
+        // 스낵의 이름을 출력하시오
+        document.write(snack.name);
+
+        document.write("<br>")
+
+        // 스낵의 맛을 출력하시오
+        document.write(snack["flavors"]);
+
+        document.write("<br>")
+
+        // let 맛 = snack.flavors;
+        // console.log(맛);
+        // for(let i=0; i<맛.length; i++){
+        //     alert(맛[i]);
+        // }
+
+        // 프로모션 할인율을 출력하시오
+        document.write(snack["promotions"]["discount"]);
+
+        
+    </script>
+</body>
+</html>

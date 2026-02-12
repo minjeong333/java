@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수가뭐니2_고차함수</title>
+</head>
+<body>
+    <script>
+
+        //양치질하기 함수
+
+        function 양치질하기(){
+        document.write("1. 치약을 짠다");
+        document.write("2. 양치를 한다");
+        document.write("3. 물로 헹군다");
+        }
+
+        양치질하기();
+
+
+        /*
+        기능:인사하기
+        입력:회수
+        반환: x
+        */
+       
+        Function 인사하기(cnt){
+            for( let i=1; i<=cnt; i++){
+            alert("안녕");
+            }
+        }
+
+        인사하기(1);
+
+
+
+        /*
+        기능
+        입력
+        반환
+        
+        */
+
+       function 합구하기10(){ 
+            let sum=0;
+            for(let i=1; i<=10; i++){
+            sum = sum + i;
+        }
+            alert(sum);
+
+    }
+
+    합구하기(10)
+    </script>
+</body>
+</html>

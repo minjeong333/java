@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜개념구하기</title>
+</head>
+<body>
+    <script>
+
+        let current = new Date(); //현재날짜
+        document.write(current);
+
+
+        //100일후
+        let 기념일100 = new Date();
+        기념일100.setDate(current.getDate() +100); //
+
+        document.write(current);
+        document.write(기념일100);
+
+    </script>
+</body>
+</html>
