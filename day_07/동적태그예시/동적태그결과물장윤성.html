@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI 뽑기</title>
+    <style>
+        .luckCircle{
+            width: 120px;
+            height: 120px;
+            background-color: skyblue;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 120px;
+            font-size: 28px;
+            margin: 20px;
+            display: inline-block;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function selectMBTI(){
+            const mbtiText = getMBTI();
+
+            const resultBox = document.getElementById("fortune");
+            resultBox.innerHTML = "당신의 MBTI는 ";
+
+            const mbtiCircle = document.createElement("div");
+            mbtiCircle.classList.add("luckCircle");
+            mbtiCircle.innerText = mbtiText;
+
+            resultBox.appendChild(mbtiCircle);
+        }
+
+      
+        function getMBTI(){
+            const mbtiList = [
+                "INTJ","INTP","ENTJ","ENTP",
+                "INFJ","INFP","ENFJ","ENFP",
+                "ISTJ","ISFJ","ESTJ","ESFJ",
+                "ISTP","ISFP","ESTP","ESFP"
+            ];
+            return mbtiList[Math.floor(Math.random() * mbtiList.length)];
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>당신의 MBTI를 맞춰보겠습니다!!</h1>
+
+    <div id="fortune">당신의 MBTI는</div>
+    <button onclick="selectMBTI()">MBTI 뽑기</button>
+</body>
+</html>

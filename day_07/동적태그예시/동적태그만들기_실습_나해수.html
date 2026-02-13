@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .luckCircle{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 0, 0);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+            margin: 20px;
+            display: inline-block;
+
+
+        }
+    </style>
+    <script>
+        function select(){
+            //alert("hi");
+
+            const fortuneText = getFortuneNumber();
+
+            const fortuneBox = document.getElementById("fortune");
+           
+            const luckCircle = document.createElement("div");
+            luckCircle.classList.add("luckCircle");
+
+            fortuneBox.innerHTML = "당신의 운세는 ";
+            luckCircle.innerText = fortuneText;
+
+            fortuneBox.appendChild(luckCircle);
+        }
+
+        //운세 만들기
+        function getFortuneNumber(){
+            const luckName = ["대박","좋음", "보통", "나쁨", "최악"];
+            return luckName[Math.floor(Math.random()*luckName.length)];
+        }
+    </script>
+</head>
+<body>
+    <h2>오늘의 운세 뽑기</h2>
+
+    <div id="fortune">당신의 운세는</div>
+    <button onclick="select()">운세 뽑기</button>
+    
+</body>
+</html>

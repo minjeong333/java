@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+    
+    <script>
+        function addDiv(){
+            // alert("dfdf");
+            let luckNumber = Math.floor(Math.random() * 45) + 1;
+
+            const div = document.createElement("div");
+
+            div.innerHTML = luckNumber;
+
+            div.style.width = "50px";
+            div.style.height = "50px";
+            div.style.borderRadius = "50%";
+            div.style.border = "1px solid black";
+            div.style.backgroundColor = "white";
+            div.style.color = "black";
+            div.style.display = "flex";
+            div.style.justifyContent = "center";
+            div.style.alignItems = "center";
+            div.style.marginTop = "10px";
+            div.style.padding = "10px";
+            
+
+        const result = document.getElementById("result");
+        console.log(result);
+
+        result.appendChild(div);
+        }
+
+        function removeDiv(){
+            const result = document.getElementById("result");
+
+            if(result.lastChild){
+                result.removeChild(result.lastChild);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h4>행운의 숫자 출력</h4>
+    <div id="result">
+
+    </div>
+    <button onclick="addDiv()">클릭</button>
+    <button onclick="removeDiv()">삭제</button>
+</body>
+</html>
