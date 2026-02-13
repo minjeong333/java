@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM요소선택2</title>
+    <script>
+        function change(){
+            // alert("ddd")
+            const item1 = document.querySelector("#item1");
+            const item2 = document.querySelector(".item2");
+            console.log(item1);
+            item1.style.backgroundColor="skyblue";
+            item1.innerHTNL="바꿔";
+
+            item2.style.backgroundColor="pink";
+            item2.innerHTML="바꿔2"
+        }
+
+        function unchange(){
+            // alert("ggg")
+            document.querySelector("#item1");
+            console.log(item1);
+            item1.style.backgroundColor="";
+            item1.innerHTNL="취소";
+
+            item2.style.backgroundColor="";
+            item2.innerHTNL="취소";
+        }
+        
+    </script>
+</head>
+<body>
+    <h1> querySelector이용하여 요소 선택하기</h1>
+    <p>무조건 한 개를 반환한다</p>
+
+    <div id="item1">item1</div>
+    <div class="item2">item2</div>
+
+    <button onclick="change()">스타일 적용</button>
+    <button onclick="unchange()">스타일 취소</button>
+
+   
+</body>
+</html>

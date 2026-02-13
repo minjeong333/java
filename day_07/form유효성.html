@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form유효성</title>
+    <script>
+        function validLogin(){
+            // alert("dfd");
+            //사용자 id, pw가 입력이 되었는지 확인하기
+
+            //폼요소 접근하기 => document.forms[0] ( document.froms 배열 사용 )
+            //폼태그 접근하기 => doxument.frm       ( document.폼의 name )
+
+            const form = document.frm;
+            console.log(form); 
+            const userId = form.userId; //userId가 input의 내용을 가지게 됨
+            const password = form.userPw; 
+
+
+            if(userId.value==""){
+                alert("id를 입력하세요");
+                userId.focus();
+            }else if(userPw.value==""){
+                alert("pw 입력하세요");
+                userPw.focus();
+            }else{
+                alert("로그인 성공");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    
+    <form name="frm" method="get">
+        <!-- 서버로 전송될 데이터 🔴name속성은 반드시 작성!! -->
+        <input type="text" name="userId">
+        <input type="password" name="userPw">
+        <button type="button" onclick="validLogin()">로그인</button>
+    </form>
+</body>
+</html>

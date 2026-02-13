@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지변경하기2</title>
+    <script>
+
+        //this를 매개변수로 전달하여 객체의 속성 바꾸기
+        function changeImage( obj ){ //매개변수 필요
+            //이미지 변경하기
+            console.log(obj);
+            // alert("dfdf");
+            obj.src="https://www.seriouseats.com/thmb/q67ofN0WLLb68mKvSvKNDg2q2b0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__11__BakedOccasions_BirthdayCake-02af7038d93647d9a7339f0802b03079.jpg"
+
+
+        }
+     
+    </script>
+</head>
+<body>
+    
+    <img src="https://images.food52.com/hCMCcgnrNaS51pbWEJUbEXkrLVo=/60a6e4b8-2765-4480-88f3-f96f73107941--2022-0607_angel-food-cake-with-strawberries-and-whipped-cream_seo_3x2_mj-kroeger-067.jpg" 
+     alt="케익이미지" onclick="changeImage(this)">
+</body>
+</html>

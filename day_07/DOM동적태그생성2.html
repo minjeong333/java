@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <div id="result">
+
+  </div>
+<button onclick="addDiv()"> 클릭</button>
+
+</body>
+  <script>
+    function addDiv(){
+
+      const div= document.createElement("div")
+    //   div 태그 만들기
+
+      //   이벤트추가
+        div.addEventListener("click",function (){
+            this.remove();
+        })
+
+      //1. 내용, 스타일 속성 변경
+          div.innerHTML="동적으로 생성된 태그";
+          div.style.backgroundColor="blue";
+          div.style.width="100px";
+          div.style.marginTop="20px";
+
+      //2. 부모를 선택
+      const result=document.getElementById("result");
+
+      //3. 부모의 자식으로 추가하기
+      result.appendChild(div);
+    }
+  </script>
+</html>
