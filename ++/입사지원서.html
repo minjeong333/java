@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입사지원서 만들어보기</title>
+</head>
+<body>
+    <h1>프론트엔드 개발자 지원서</h1>
+    <p class="description">HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+    <div class="info">
+        <h3>개인정보</h3>
+        <ul>
+            <li>이름<input type="text" placeholder="공백없이 입력하세요"></li>
+            <li>연락처<input type="text"></li>
+        </ul>
+    </div>
+    <div class="field">
+        <h3>지원분야</h3>
+        <ul>
+            <li><input type="radio" checked>웹퍼블리싱</li> 
+            <li><input type="radio">웹 애플리케이션 개발</li>
+            <li><input type="radio">개발 환경 개선</li>
+        </ul>
+    </div>
+    <div class="motive">
+        <h3>지원동기</h3>
+        <input type="textarea" style="width: 300px; height: 100px;">
+    </div>
+
+    <form action="/submit" method="post">
+  <label for="username">아이디:</label>
+  <input type="text" id="username" name="username">
+  <label for="password">비밀번호:</label>
+  <input type="text" id="username" name="username">
+</body>
+</html>

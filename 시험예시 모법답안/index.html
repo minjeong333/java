@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <STYLE> 
+        header{
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            position: relative; /*규칙 따위 무시하고 내가 원하는 곳에 좌표를 찍기 위해
+                                 부모로 설정 -> 다른 요소들이 어디 있든 내가 원하는 위치에 "겹쳐서"width: 
+                                 둘 수 있음 ex) 이미지 위에 띄운 sale아이콘*/
+        }
+        .title{
+            position: absolute; /*relative가 있는 부분(부모)의 자식으로 설정*/
+            left: 10px;
+            top: 20px;
+        }
+        .search{
+            /* width: 400px; */
+            width: 200px; /*input 150px + img 50px*/
+            height: 50px;
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+            /* border: 1px solid black; */
+            display: flex;  /*input이랑 이미지를 나란히*/
+        }
+        /*⭐search 안에 input태그 수식 추가해주기 */
+        .search input{
+            width: 150px;
+            border: none;
+            outline: none; /*border:none 과 outline:none을 같이 쓰는 이유
+                            브라우저가 기본적으로 제공하는 모든 시각적 피드백을 완전히 제거하고,
+                            내가 직접 디자인한 스타일만 입히겠다!!! (=완젹한 zero-base를 만드는 것)*/
+        }
+        .search-img{
+            /* position: absolute; */
+            /* right: 10px; */
+            /*width: 40px;*/ /*크기 맞추는 거 다시 공부하기*/
+            width: 50px; /*너비 & 높이 설정하는 거 잊지 않기*/
+            height: 50px;
+            /* border: 2px solid blue; */
+            background-image: url(./images/검색.png);
+            background-size: cover;
+            background-position: center;
+
+        }
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+        }
+        nav a{
+            text-decoration: none;
+            color: black;
+            /*padding 조절 -> a태그 간 간격이 멀어짐 추가*/
+            padding: 5px;
+        }
+        section{
+            /* border: 1px solid black; */
+            height: 600px;
+            /* margin-top: 10px; */
+            
+        }
+        section ul{
+            /* border: 1px solid red; */
+            display: flex; /*부모로 설정하겠다*/
+            /* flex-direction: row; */ /*써도 되고 안서도 됨 
+                                        ∵ display:flex 안에 default로 flex-direction:row가 들어 있음
+                                        */
+
+            flex-wrap: wrap; /*flex의 기본 성질(nowrap) : 무슨 일이 있어도 한 줄에 다 구겨넣을게ㅇㅇ
+                                                자식요소의 합 > 부모요소 => 결과1) 자식요소의 너비 줄일게ㅇㅇ
+                                                                         결과2) 삐져나갈게ㅇㅇ(overflow)
+                                                wrap  :  자식요소의 합 > 부모 => 다음줄로 넘길게ㅇㅇ*/
+
+            justify-content: center; /*justify-content: 자식들을 "가로"로 어떻게 설정할래?
+                                       align-items: 자식들을 "세로"로 어떻게 설정할래? */
+            list-style: none;
+            /* margin: 0 auto; */ /*margin 0 auto를 쓰려면 반드시 너비에 대한 값이 정해져야 함
+                                    여기서 auto는 좌우 남는 공간을 일정하게 나눠 가진다(결과적으로 자연스럽게 중앙에 배치됨)는건데
+                                    만약 가로 너비에 설정값이 없어 100%를 쓰고 있다면
+                                    남는 부분이 없기 때문에 auto가 계산될 수 없음
+                                    TIP)내용물(글자 및 아이콘 등)을 한 꺼번에 옮기고 싶다? 
+                                    - 내용물을 담고 있는 box에 display:flex로 부모 설정을 하고
+                                    - 자식들(위에서 말한 내용물)이 정렬될 수 있도록 justify-content: center;를
+                                      div 속성으로 넣어주기 
+                                    - !!!해당 경우에는 margin: 0 auto보다 이게 더 효율적임!!!   */
+            margin: 0;                    
+                                
+            
+        }
+        section li{
+            width: 300px;
+            padding: 20px;
+            border: 0.5px solid rgb(255, 241, 241);
+            text-align: center; /*text-align: center; 텍스트나 인라인 요소를 가로로 정렬
+                                "글자나 문장, 이미지를 가운데로 보내고 싶어!!"
+                                  즉 <span>, <a>, <img>등 정렬 가능
+                                  정렬하고 싶은 요소의 "부모"요소에 선언할 것
+                                  단, 부모가 블록 요소여야 함
+                                  
+                                  +) justify-content: center;와 다른점은?
+                                  "div(박스) 자체를 부모 박스 한가운데에 놓고 싶어!!!"
+                                  flex 박스 내 자식 요소들(flex item-박스 덩어리 전체)의 정렬
+                                  단, 부모에서 display:flex가 있어야함 (부모 설정이 필요하단 얘기)*/
+            position: relative;
+        }
+        section li img{
+            width: 200px;
+            height: 220px;
+        }
+        .name{
+            width: 130px;
+            padding: 10px;
+            color: red;
+            background-color: black;
+            position: absolute;
+            top: 0;
+        }
+        footer{
+            height: 60px;
+            background-color: rgb(233, 239, 239);
+            display: flex;
+        }
+        footer > div{
+            width: 33%;
+            height: 60px;
+            /*윗쪽 공간 살짝 만들기 추가*/
+            padding-top: 20px;
+        }
+        
+    </STYLE>
+</head>
+<body>
+    <header>
+    <div class="title">
+        <img src="./images/logo.png" alt="">
+    </div>
+    <div class="search">
+        <input type="text">
+        <!-- <img src="./images/검색.png" alt="">  -->
+         <div class="search-img"></div>
+    </div>
+    </header>
+    <nav>
+        <a href="./login.html">로그인</a>
+        <a href="#">회원가입</a>
+        <a href="./index.html">홈으로</a>
+    </nav>
+    <section>
+        <ul>
+           <li>
+            <img src="./images/img01.png" alt="">
+            <p>프로젝트기반 빅데이터분석 과정</p>
+            <div class="name">bigdata</div>
+           </li>
+           <li>
+            <img src="./images/img02.png" alt="">
+            <p>자바(JAVA)&안드로이드 개발자 양성과정</p>
+            <div class="name">Android</div>
+           </li>
+           <li>
+            <img src="./images/img03.png" alt="">
+            <p>Web기반 프론트엔드 자바개발자 양성과정</p>
+            <div class="name">Front</div>
+           </li>
+        </ul>
+    </section>
+    <footer>
+        <div><img src="./images/footer_acorn.png" alt=""></div>
+        <div>(주)에이콘이즈 에이콘아카데미(홍대)</div>
+        <div>COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED</div>
+    </footer>
+</body>
+</html>

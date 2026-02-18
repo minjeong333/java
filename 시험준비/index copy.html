@@ -7,17 +7,17 @@
     <style>
       header {
         height: 100px;
-        background-color: lightblue;
+        background-color: #bdbdbd;
 
         position: relative;
       }
       nav {
         height: 60px;
-        background-color: rgb(167, 86, 86);
+        background-color: #796262;
       }
       section {
         height: 500px;
-        background-color: rgb(132, 218, 132);
+        /* background-color: rgb(132, 218, 132); */
       }
       footer {
         height: 100px;
@@ -67,7 +67,7 @@
         padding: 10px;
       }
       /*상품목록 만들기 css*/
-      ul{
+      section ul{
         list-style: none;
         margin: 0;
         border: 1px solid red;
@@ -78,16 +78,33 @@
         margin: 0 auto;
 
       }
-      ul li{
+      section ul li{
         width: 300px;
         height: 300px;
         border: 1px solid black;
         text-align: center;  
       }
 
-      ul li img{
+      section  ul li img{
         width: 70%;
       }
+
+
+      nav ul{
+        list-style: none;
+        display: flex;
+      }
+      nav ul li{
+        padding: right;
+      }
+
+      /**/
+
+      a{
+        text-decoration: none; /*밑줄 빼기*/
+        color: whitesmoke;
+      }
+      
     </style>
   </head>
   <body>
@@ -101,7 +118,13 @@
       </div>
     </header>
 
-    <nav>회원가입 로그인</nav>
+    <nav>
+      <ul>
+        <li><a href="">홈으로</a></li>
+        <li><a href="로그인.html">로그인</a></li>
+        <li><a href="회원가입.html">회원가입</a></li>
+      </ul>
+    </nav>
 
     <section>
       
