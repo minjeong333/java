@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또랜덤색상</title>
+</head>
+<body>
+    <script>
+
+        /*
+        기능:랜덤한 색깔 가져오기
+        입력:X
+        반환: 랜덤한 컬러( red, #FFFFFF)
+        */
+
+        function getRandomColor(){
+
+            const colors = [
+            "red", "blue", "green", "yellow", "purple", "orange", 
+            "pink", "brown", "cyan", "magenta", "lime", "teal", 
+            "navy", "gold", "coral", "salmon", "beige", "khaki", 
+            "olive", "maroon", "turquoise", "lavender", "violet"
+            ];
+
+           const result = Math.random() * colors.length; // => 0~20
+           console.log(result);
+           const finalResult = Math.floor(result);
+           console.log(finalResult);
+
+           return finalResult;
+        }
+
+        let randomColor = getRandomColor();
+        // alert(randomColor);
+        console.log(randomColor);
+
+        function getRandomColor2(){
+            const r = Math.floor(Math.random()*256);// 0~255.99999 //0~255 0~255 0~255
+            // alert(r);
+             const g = Math.floor(Math.random()*256);
+             const b = Math.floor(Math.random()*256);
+
+             const rgbColor=`rgb(${r},${g}.${b})`; // rgb(0,0,0)
+             return rgbColor;
+        }
+
+        let resultColor = getRandomColor2();
+        alert("resultColor")
+
+
+
+    </script>
+</body>
+</html>

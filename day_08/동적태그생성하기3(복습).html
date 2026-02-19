@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적태그복습3</title>
+    <style>
+        .style1{
+            border: 1px solid black;
+            padding: 5px; 
+            margin-left: 30px ; /*inline 이라서 패딩 가능, 마진: 왼쪽 오른쪽 가능, 위아래 불가*/
+            /* 
+            글자처럼 여겨져서 실행 안됨
+            
+            margin-top: 300px; 
+            */
+        }
+    </style>
+    <script>
+        function addATag(){
+            // alert("dfdf");
+
+            //태그생성
+            const a = document.createElement("a");
+            a.href="https://www.naver.com";
+            a.target="_blank";
+            a.textContent="Naver로 갈래요";
+            a.classList.add("style1");
+
+            //부모영역 얻어오기
+           const result = document.getElementById("result");
+
+
+            //부모영역에 추가하기
+            result.appendChild(a);
+
+        }
+    </script>
+</head>
+<body>
+    
+    <button onclick="addATag()"> a 태그 생성</button>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM요소_부모자식선택하기</title>
+    <script>
+        //movie(부모)를 기준으로 자식요소 찾기(얻어오기);
+        function getMovie1(){
+            alert("dfdf");
+
+          const movie = document.getElementById("movie");
+          const result = movie.firstElementChild;
+          console.log(result);
+          console.log(result.innerHTML);
+        }
+
+        function getMovie3(){
+            const movie = document.getElementById("movie");
+            //얻은 객체 확인하기
+
+            // 막내 찾기
+           const item= movie.lastElementChild;
+           console.log(item);
+
+           const name = item.innerHTML;
+           alert(name);
+        }
+
+        function getMovie2(){
+            alert("efe");
+            const movie = document.getElementById("movie");
+            const first = movie.firstElementChild;
+            console.log(first);
+
+           const second = first.nextElementSibling
+           console.log(second);
+
+          const name = second.innerHTML;
+          alert(name);
+        }
+
+
+        function getParent(){
+            alert("dfddd");
+
+            const speed = document.getElementById("speed");
+            //확인하기
+
+            //speed 영화 태그를 기준으로 부모찾기
+           const movie =  speed.parentElement;
+           console.log(movie);
+        }
+    </script>
+</head>
+<body>
+    <h2> div 태그의 자식요소 선택</h2>
+
+    <div id="movie">
+        <p>아바타</p>
+        <p id="speed">스피드</p>
+        <p>매트릭스</p>
+    </div>
+
+    <button onclick="getMovie1()">첫 번째 영화</button>
+    <button onclick="getMovie2()">두 번째 영화</button>
+    <button onclick="getMovie3()">세 번째 영화</button>
+    <button onclick="getParent()">스피드 영화의 부모태그 얻어오기</button>
+
+</body>
+</html>

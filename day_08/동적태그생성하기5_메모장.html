@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적태그_메모장</title>
+    <style>
+        .memo{
+            border: 1px solid black;
+            width: 300px;
+            padding: 10px;
+
+            text-align: center;
+        }
+        .result{
+            border: 1px solid black;
+            width: 300px;
+            padding: 10px;
+        }
+
+
+        .divItem{
+            display: flex;
+        }
+        .memoContent{
+            width: 90%;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        function addMeomo(){
+            // alert("eef");
+
+            //태그 생성
+            //div - (메모내용 + 삭제) 두 개를 감싸는 영역
+            //div - 메모내용
+            //div - 삭제
+
+            //사용자가 입력한 내용 가져오기
+            const content = document.getElementById("content").value;
+            console.log(content);
+
+
+            const divItem = document.createElement("div");
+            // divItem.innerHTML="메모장입니다";
+            divItem.classList.add("divItem");
+
+            //item  안쪽에 들어갈 2개의 요소(태그) 만들기
+            const memoContent = document.createElement("div");
+            const deleteBtn= document.createElement("div");
+            memoContent.innerHTML=content;
+            memoContent.classList.add("memoContent");
+            deleteBtn.innerHTML="x";
+
+            divItem.appendChild(memoContent);
+            divItem.appendChild(deleteBtn);
+
+           const result= document.querySelector(".result");
+
+           result.appendChild(divItem);
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 메모장 입력하기 -->
+    <div class="memo"> 
+        <input type="text" id="content"><button onclick="addMeomo()">추가</button>
+    </div>
+
+    <!-- 메모장 결과 나오기 -->
+     <div class="result">
+     </div>
+</body>
+</html>

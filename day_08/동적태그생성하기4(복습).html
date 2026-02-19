@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적태그복습4</title>
+     <script>
+        function addImgTag(){
+            // alert("dfdf");
+
+
+           const img= document.createElement("img");
+           img.src="https://wimg.munhwa.com/news/cms/2025/07/09/news-p.v1.20250707.f0a19caf4fc84dc696a649ada68559f3_P1.jpg";
+           img.alt="고양이";
+           img.style.width="300px";
+           img.style.height="300px";
+
+           //부모영역 얻어오기
+           const result = document.getElementById("result");
+
+
+            //부모영역에 추가하기
+            result.appendChild( img);
+
+        }
+
+     </script>
+</head>
+<body>
+    <button onclick="addImgTag()">이미지 태그 생성</button>
+    <div id="result"></div>
+</body>
+</html>
