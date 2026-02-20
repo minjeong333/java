@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지갤러리2</title>
+    <style>
+        .gallery-wrap{
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+
+            position: relative;
+        }
+        .gallery{
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+
+            background-image: url(media/Penguins.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-btn{
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+
+            position: absolute;
+            top: 50%;
+            /*tramsform: translateY(-50%); 세로가운데에 위치하려면 y축 이동*/
+        }
+        .left{
+            left: -20px;
+        }
+        .right{
+            right: -20px;
+        }
+
+    </style>
+        
+    <script>
+
+           let imgNames = ["media/Penguins.png",
+            "media/Lighthouse.png",
+            "media/Chrysanthemum.png",
+            "media/Desert.png",
+            "media/Hydrangeas.png",
+            "media/Jellyfish.png",
+            "media/Koala.png",
+            "media/Tulips.png"
+        ];
+
+
+        let index=0;
+        function next(){
+            // alert("eded");
+
+            // 이미지갤러리 영역 선택하기
+           const gallery = document.querySelector(".gallery");
+           console.log(gallery);
+        //  gallery.style.backgroundImage="url("+imgNames[index]+")";
+            gallery.style.backgroundImage=`url(${imgNames[index]})`;
+                                         //url(media/Penguins.png)
+            gallery.style.backgroundPosition="center";
+            gallery.style.backgroundSize="cover";
+            index++; // index = index + 1;
+            if(index >= imgNames.length){
+                index=0;
+            }
+        }
+
+        function prev(){
+            // alert("ddd");
+            index--; // index = index-1;
+
+            if(index<0){
+                index = imgNames.length-1;
+            }
+           const gallery =  document.querySelector(".gallery");
+           gallery.style.backgroundImage=`url(${imgNames[index]})`;
+           gallery.style.backgroundPosition="center";
+           gallery.style.backgroundSize="cover";
+
+        }
+
+    </script>
+</head>
+<body>
+    <!-- 갤러리영역 -->
+     <div class="gallery-wrap">
+         
+        <!-- 갤러리 이미지 영역 -->
+        <div class="gallery"></div>
+
+        <!-- 갤러리 버튼 영역 -->
+         <div class="gallery-btn left" onclick="prev()" >왼</div>
+         <div class="gallery-btn right" onclick="next()">오</div>
+     </div>
+</body>
+</html>

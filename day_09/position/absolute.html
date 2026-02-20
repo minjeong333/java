@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+    <style>
+        li:nth-child(1){
+            background-color: red;
+        }
+        li:nth-child(2){
+            background-color: orange;
+            position: absolute; /* left, top, bottom, right */
+            /*자신의 static 위치에서 빠져나옴
+              => content의 크기가 됨(줄어든다)*/
+            bottom: 0;
+        }
+        li:nth-child(3){
+            background-color: pink;
+        }
+        li:nth-child(4){
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- absolute는 자신의 원래위치에서 빠져나옴
+         = 문서 위에 떠있다 ! => 요소를 겹치게 할 수 있다 
+         ∴ 특정부모가 없으면 문서전체를 부모로 인식
+         자신의 조상 중에 
+         relative, absoulte, fixed, sticky가 있으면 
+         그 영역을 부모로 인식 -->
+         
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+</html>

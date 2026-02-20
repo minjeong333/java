@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지갤러리3</title>
+    <style>
+        .gallery-wrap{
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+
+            position: relative;
+        }
+        .gallery{
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+
+            background-image: url(media/Penguins.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-btn{
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+
+            position: absolute;
+            top: 50%;
+            /*tramsform: translateY(-50%); 세로가운데에 위치하려면 y축 이동*/
+        }
+        .left{
+            left: -20px;
+        }
+        .right{
+            right: -20px;
+        }
+        .title{
+            position: absolute;
+            left: 50%; 
+            /* transform: translate(); */
+        }
+
+    </style>
+        
+    <script>
+
+           let imgNames = ["media/Penguins.png",
+            "media/Lighthouse.png",
+            "media/Chrysanthemum.png",
+            "media/Desert.png",
+            "media/Hydrangeas.png",
+            "media/Jellyfish.png",
+            "media/Koala.png",
+            "media/Tulips.png"
+        ];
+
+        const titles = ["펭귄", "집", "국화", 
+                             "사막", "수국", "해파리", 
+                             "코알라", "튤립"];
+
+        
+        /*
+
+        //객체배열로 사용가능
+        
+            let images=[
+            { name: "media/Penguins.png",
+              title:"펭귄"
+              }
+
+            ];
+
+        */
+
+
+
+        let index=0;
+        function next(){
+            // alert("eded");
+
+            // 이미지갤러리 영역 선택하기(+이미지 넣기)
+           const gallery = document.querySelector(".gallery");
+           console.log(gallery);
+        //  gallery.style.backgroundImage="url("+imgNames[index]+")";
+            gallery.style.backgroundImage=`url(${imgNames[index]})`;
+                                         //url(media/Penguins.png)
+            gallery.style.backgroundPosition="center";
+            gallery.style.backgroundSize="cover";
+
+
+            //이미지제목 선택하기(+ 제목 넣기)
+             const title = document.querySelector(".title");
+             title.innerHTML = titles[index];
+
+
+            index++; // index = index + 1;
+            if(index >= imgNames.length){
+                index=0;
+            }
+        }
+
+        function prev(){
+            // alert("ddd");
+            index--; // index = index-1;
+
+            if(index<0){
+                index = imgNames.length-1;
+            }
+           const gallery =  document.querySelector(".gallery");
+           gallery.style.backgroundImage=`url(${imgNames[index]})`;
+           gallery.style.backgroundPosition="center";
+           gallery.style.backgroundSize="cover";
+
+        }
+
+    </script>
+</head>
+<body>
+    <!-- 갤러리영역 -->
+     <div class="gallery-wrap">
+         
+        <!-- 갤러리 타이틀 제목 -->
+         <div class="title">펭귄</div>
+        <!-- 갤러리 이미지 영역 -->
+        <div class="gallery"></div>
+
+        <!-- 갤러리 버튼 영역 -->
+         <div class="gallery-btn left" onclick="prev()" >왼</div>
+         <div class="gallery-btn right" onclick="next()">오</div>
+     </div>
+</body>
+</html>

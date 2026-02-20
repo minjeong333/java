@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소정가운데4</title>
+    <style>
+        .outer-box{
+            border: 1px solid black;
+            width:500px;
+            height:400px;
+            position: relative;         
+        }
+        .item{
+            width: 100px;
+            height: 150px;
+            border: 1px solid black;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="outer-box">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

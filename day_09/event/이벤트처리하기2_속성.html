@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 속성</title>
+</head>
+<body>
+    <button id="btn1">클릭1</button>
+    <button>클릭2</button>
+
+    <script>
+
+        //이벤트 처리할 대상을 처리하기
+       const btn1 = document.getElementById("btn1");
+       co0nsole.log(btn1); //못찾으면 null
+
+       btn1.onclick =function(){
+            alert("hi 이벤트속성으로 처리하기");
+       };
+       btn1.onclick =function(){
+            alert("****hi 이벤트속성으로 처리하기****");
+       };  //최종마지막 내용으로 등록됨
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지갤러리</title>
+    <style>
+        .gallery-wrap{
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+
+            position: relative;
+        }
+        .gallery{
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+        }
+        .gallery-btn{
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+
+            position: absolute;
+            top: 50%;
+            /*tramsform: translateY(-50%); 세로가운데에 위치하려면 y축 이동*/
+        }
+        .left{
+            left: -20px;
+        }
+        .right{
+            right: -20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 갤러리영역 -->
+     <div class="gallery-wrap">
+         
+        <!-- 갤러리 이미지 영역 -->
+        <div class="gallery"></div>
+
+        <!-- 갤러리 버튼 영역 -->
+         <div class="gallery-btn left" >왼</div>
+         <div class="gallery-btn right">오</div>
+     </div>
+</body>
+</html>

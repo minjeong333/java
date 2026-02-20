@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixed</title>
+    <style>
+        li:nth-child(1){
+            background-color: red;
+        }
+        li:nth-child(2){
+            background-color: orange;
+            position: fixed; /*absoulte와 차이점
+                             - 무조건 문서 전체가 기준                
+                             - 스크롤에 영향 받지X(∵ 완전고정)
+                             -  left, top, bottom, right 사용 가능  
+                             */
+
+            width: 100px;
+        }
+        li:nth-child(3){
+            background-color: pink;
+        }
+        li:nth-child(4){
+            background-color: lightblue;
+            height: 2000px;
+        }
+        .order{
+            position: fixed;
+            right:0;
+            bottom: 100px;
+            border: 1px solid black;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+     <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+
+        <div class="order">주문하기</div>
+    </ul>
+</body>
+</html>
