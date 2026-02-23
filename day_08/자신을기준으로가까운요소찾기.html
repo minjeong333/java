@@ -23,26 +23,28 @@
 
          }
 
-         function getContent2(obj){
-
-            /*
-            const div = obj.parentElement.parentElement;
-            cosnsole.log(div);
-
-            const aa = div.querySelector(".aa");
-
-            const result =aa.value;
-            alert("result");
+        
+        function getContent2(obj){
+            //
+            /*const div  = obj.parentElement.parentElement;
+            console.log( div); 
+            const   aa= div.querySelector(".aa");
+            const  result  = aa.value;
+            alert( result); 
             */
+            const div  =obj.parentElement;
+            const textDiv  =div.previousElementSibling;
+            console.log( textDiv);
+            
+            const input  = textDiv.firstElementChild;
+            console.log( input);
+            alert( input.value);
+            
 
-           const div= obj.parentElement;
-           const textDiv = div.previousSibling;
-           console.log(textDiv);
 
-          const input = textDiv.firstElementChild;
-          console.log(input);
-          alert(input.value);
-         }
+
+        }
+      
     </script>
 </head>
 <body>
