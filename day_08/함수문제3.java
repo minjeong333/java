@@ -11,7 +11,7 @@ public class 함수문제3 {
 	 */
 	
 	//Sol1) 1차원으로 풀기
-	/*
+	
 	public static String[] weeklyWeather() {
 	String[] info = {"맑음", "흐림", "비", "눈"};
 	String[] result = new String[7]; 
@@ -33,8 +33,8 @@ public class 함수문제3 {
 		System.out.println(day[i] + " 날씨는" + " " + weekWeather[i] + "입니다.");
 	  }
 	}
-	*/
 	
+	/*
 	//2차원으로 풀기
 	    public static String[][] getWeeklyWeatherGrid() {
 	        String[] days = {"월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"};
@@ -63,5 +63,6 @@ public class 함수문제3 {
 	            System.out.println(weekData[i][0] + " : " + weekData[i][1]);
 	        }
 	    }
+	    */
 	}
 

@@ -1,4 +1,4 @@
-package javaprj.day07;
+package day07;
 
 public class 설음식만들기 {
 
