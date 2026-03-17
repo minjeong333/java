@@ -1,0 +1,37 @@
+package javaprj.day11;
+
+public class Student2Main {
+
+	public static void main(String[] args) {
+		
+		Student2 s = new Student2("홍길동", 100, 90); // 학생정보
+
+		System.out.println(s.toString()); //
+
+		//System.out.println(s.avg); 값이 당연히 불러와지지만 객체지향에서 사용하는 방법이 아님
+		System.out.println(s.getAvg());
+		
+		System.out.println(s.getKor()); //
+		System.out.println(s.getName());
+		System.out.println(s.getEng());
+		
+		System.out.println(s.getGrade());
+		
+		
+		//국어점수 변경하기
+		
+		s.setKor(75);
+		//s.eng=98; => 객체지향방식이 아님!!, 매서드를 통해서 객체의 값을 사용할 수 있도록 하기
+		s.setEng(98);
+		
+		System.out.println(s.toString()); //
+
+		
+		//
+		s.calcAvg();
+		s.calcGrade();
+		
+		System.out.println(s.toString());//
+	}
+
+}
