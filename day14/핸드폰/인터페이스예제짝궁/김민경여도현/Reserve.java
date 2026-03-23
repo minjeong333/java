@@ -1,0 +1,5 @@
+package javaprj.day14.핸드폰.인터페이스예제짝궁.김민경여도현;
+
+public interface Reserve {
+	int reserve(Movie movie);
+}
